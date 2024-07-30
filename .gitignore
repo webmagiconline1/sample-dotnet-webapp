@@ -149,7 +149,7 @@ yarn.lock
 .vscode/
 
 # Razor Pages
-*.cshtml.cs
+# *.cshtml.cs
 
 # Static files
 wwwroot/
