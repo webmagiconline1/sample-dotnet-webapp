@@ -2,7 +2,7 @@ trigger:
 - main
 
 pool:
-  vmImage: 'ubuntu-latest'
+  name: Pool1
 
 variables:
   solution: '**/*.sln'
