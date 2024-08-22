@@ -16,11 +16,6 @@ steps:
   inputs:
     restoreSolution: '$(solution)'
 
-# - task: WhiteSource@21
-#   inputs:
-#     cwd: '$(System.DefaultWorkingDirectory)'
-#     projectName: 'sample-dotnet-webapp'
-
 - task: VSBuild@1
   inputs:
     solution: '$(solution)'
