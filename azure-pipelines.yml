@@ -28,6 +28,18 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
+- task: SonarCloudPrepare@2
+  inputs:
+    SonarCloud: 'SonarCloud'
+    organization: 'techpid-learn'
+    scannerMode: 'MSBuild'
+    projectKey: 'techpid-learn_sample-dotnet-webapp'
+    projectName: 'sample-dotnet-webapp'
+
+- task: SonarCloudAnalyze@2
+  inputs:
+    jdkversion: 'JAVA_HOME_17_X64'
+
 - task: VSTest@3
   inputs:
     testSelector: 'testAssemblies'
